@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEARTLOOP</title>
+    <script>
+        // Проверяем наличие токена
+        const token = localStorage.getItem('access_token');
+        if (token) {
+            // Если токен есть, перенаправляем на профиль
+            window.location.href = '/profile.html';
+        } else {
+            // Если токена нет, перенаправляем на страницу входа
+            window.location.href = '/login.html';
+        }
+    </script>
+</head>
+<body>
+    <p>Перенаправление...</p>
+</body>
+</html> 

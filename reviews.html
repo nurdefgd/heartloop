@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - HEARTLOOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        }
+        .star-rating {
+            color: #FCD34D;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Навигация -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-purple-600">HEARTLOOP</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="profile.html" class="w-8 h-8 rounded-full overflow-hidden">
+                        <img src="https://picsum.photos/100" alt="Профиль" class="w-full h-full object-cover">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <!-- Секция отзывов -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8">Отзывы о свиданиях</h2>
+
+                <!-- Форма нового отзыва -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Оставить отзыв о свидании</h3>
+                    <form class="space-y-6">
+                        <!-- Выбор пользователя -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">С кем было свидание</label>
+                            <div class="flex items-center space-x-4 p-4 border rounded-lg">
+                                <img src="https://picsum.photos/50" alt="Фото" class="w-12 h-12 rounded-full">
+                                <div>
+                                    <div class="font-medium">Мария, 25</div>
+                                    <div class="text-sm text-gray-500">12 марта 2024</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Оценка -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Оценка свидания</label>
+                            <div class="flex space-x-2 star-rating text-3xl">
+                                <button type="button" class="hover:scale-110 transition">⭐</button>
+                                <button type="button" class="hover:scale-110 transition">⭐</button>
+                                <button type="button" class="hover:scale-110 transition">⭐</button>
+                                <button type="button" class="hover:scale-110 transition">⭐</button>
+                                <button type="button" class="hover:scale-110 transition">⭐</button>
+                            </div>
+                        </div>
+
+                        <!-- Категории оценки -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Пунктуальность</label>
+                                <select class="w-full p-2 border rounded-lg">
+                                    <option>Отлично</option>
+                                    <option>Хорошо</option>
+                                    <option>Удовлетворительно</option>
+                                    <option>Плохо</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Общение</label>
+                                <select class="w-full p-2 border rounded-lg">
+                                    <option>Отлично</option>
+                                    <option>Хорошо</option>
+                                    <option>Удовлетворительно</option>
+                                    <option>Плохо</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Соответствие фото</label>
+                                <select class="w-full p-2 border rounded-lg">
+                                    <option>Полностью соответствует</option>
+                                    <option>Частично соответствует</option>
+                                    <option>Не соответствует</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Атмосфера</label>
+                                <select class="w-full p-2 border rounded-lg">
+                                    <option>Отлично</option>
+                                    <option>Хорошо</option>
+                                    <option>Удовлетворительно</option>
+                                    <option>Плохо</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Комментарий -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Комментарий</label>
+                            <textarea class="w-full p-3 border rounded-lg h-32" placeholder="Расскажите о вашем впечатлении..."></textarea>
+                        </div>
+
+                        <!-- Рекомендации -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Рекомендации</label>
+                            <div class="flex flex-wrap gap-2">
+                                <button type="button" class="px-4 py-2 rounded-full border hover:bg-purple-50 transition">🎭 Интересная личность</button>
+                                <button type="button" class="px-4 py-2 rounded-full border hover:bg-purple-50 transition">🗣️ Отличный собеседник</button>
+                                <button type="button" class="px-4 py-2 rounded-full border hover:bg-purple-50 transition">⏰ Пунктуальный</button>
+                                <button type="button" class="px-4 py-2 rounded-full border hover:bg-purple-50 transition">😊 Позитивный</button>
+                                <button type="button" class="px-4 py-2 rounded-full border hover:bg-purple-50 transition">🎯 Целеустремленный</button>
+                            </div>
+                        </div>
+
+                        <!-- Приватность -->
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" class="rounded text-purple-600">
+                            <label class="text-sm text-gray-700">Сделать отзыв анонимным</label>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 gradient-bg text-white rounded-full hover:opacity-90 transition">
+                            Опубликовать отзыв
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Список отзывов -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold">Последние отзывы</h3>
+
+                    <!-- Отзыв -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://picsum.photos/50?random=1" alt="Фото" class="w-12 h-12 rounded-full">
+                                <div>
+                                    <div class="font-medium">Александр, 28</div>
+                                    <div class="text-sm text-gray-500">2 дня назад</div>
+                                </div>
+                            </div>
+                            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Отличное свидание! Мария оказалась очень интересным собеседником. Мы прекрасно провели время в кафе, обсуждая путешествия и фотографию.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">🗣️ Отличный собеседник</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">⏰ Пунктуальная</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">😊 Позитивная</span>
+                        </div>
+                    </div>
+
+                    <!-- Отзыв -->
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-500">A</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Анонимный отзыв</div>
+                                    <div class="text-sm text-gray-500">неделю назад</div>
+                                </div>
+                            </div>
+                            <div class="star-rating">⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Приятное свидание в парке. Дмитрий оказался очень начитанным и интересным человеком. Будем продолжать общение!
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">🎭 Интересная личность</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">🎯 Целеустремленный</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Обработка звездного рейтинга
+        const stars = document.querySelectorAll('.star-rating button');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    s.style.opacity = i <= index ? '1' : '0.3';
+                });
+            });
+        });
+
+        // Обработка тегов рекомендаций
+        const recommendationTags = document.querySelectorAll('[type="button"]');
+        recommendationTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                tag.classList.toggle('bg-purple-100');
+                tag.classList.toggle('text-purple-600');
+            });
+        });
+    </script>
+</body>
+</html> 

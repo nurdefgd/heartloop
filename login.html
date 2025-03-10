@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Love Breeze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <!-- Логотип и заголовок -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-purple-600">Love Breeze</h2>
+                <p class="mt-2 text-gray-600">Войдите или создайте аккаунт</p>
+            </div>
+
+            <!-- Переключатель вкладок -->
+            <div class="flex rounded-full bg-gray-100 p-1">
+                <button class="w-1/2 py-2 text-sm font-medium rounded-full bg-purple-600 text-white" id="loginTab">
+                    Вход
+                </button>
+                <button class="w-1/2 py-2 text-sm font-medium text-gray-700" id="registerTab">
+                    Регистрация
+                </button>
+            </div>
+
+            <!-- Форма входа -->
+            <form id="loginForm" class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <input type="email" required class="appearance-none rounded-t-md relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Email или телефон">
+                    </div>
+                    <div>
+                        <input type="password" required class="appearance-none rounded-b-md relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Пароль">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
+                        <label class="ml-2 block text-sm text-gray-900">Запомнить меня</label>
+                    </div>
+                    <a href="#" class="text-sm font-medium text-purple-600 hover:text-purple-500">Забыли пароль?</a>
+                </div>
+
+                <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-full text-white gradient-bg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    Войти
+                </button>
+            </form>
+
+            <!-- Форма регистрации (скрыта по умолчанию) -->
+            <form id="registerForm" class="mt-8 space-y-6 hidden">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <input type="text" required class="appearance-none rounded-t-md relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Имя">
+                    </div>
+                    <div>
+                        <input type="email" required class="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="tel" required class="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Телефон">
+                    </div>
+                    <div>
+                        <input type="date" required class="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Дата рождения">
+                    </div>
+                    <div>
+                        <select class="appearance-none relative block w-full px-3 py-4 border border-gray-300 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10">
+                            <option value="">Выберите пол</option>
+                            <option value="male">Мужской</option>
+                            <option value="female">Женский</option>
+                            <option value="other">Другой</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="password" required class="appearance-none rounded-b-md relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10" placeholder="Пароль">
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <input type="checkbox" required class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
+                    <label class="ml-2 block text-sm text-gray-900">
+                        Я согласен с <a href="#" class="font-medium text-purple-600 hover:text-purple-500">условиями использования</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-full text-white gradient-bg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    Создать аккаунт
+                </button>
+            </form>
+
+            <!-- Социальные сети -->
+            <div class="mt-6">
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-gray-50 text-gray-500">Или войдите через</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                    <button class="w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-full shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </button>
+                    <button class="w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-full shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginTab = document.getElementById('loginTab');
+        const registerTab = document.getElementById('registerTab');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('bg-purple-600', 'text-white');
+            loginTab.classList.remove('text-gray-700');
+            registerTab.classList.remove('bg-purple-600', 'text-white');
+            registerTab.classList.add('text-gray-700');
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        registerTab.addEventListener('click', () => {
+            registerTab.classList.add('bg-purple-600', 'text-white');
+            registerTab.classList.remove('text-gray-700');
+            loginTab.classList.remove('bg-purple-600', 'text-white');
+            loginTab.classList.add('text-gray-700');
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+    </script>
+</body>
+</html> 
